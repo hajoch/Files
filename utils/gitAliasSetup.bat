@@ -49,3 +49,6 @@ git config --global alias.people "!git shortlog -n -s --no-merges $@ | cat - && 
 REM 	Show all branches not merged into current branch (HEAD)
 git config --global alias.unmerged "!git fetch --all && git branch --all --no-merged HEAD"
 git config --global alias.merged "!git fetch --all && git branch --all --merged HEAD"
+
+REM 	Show unpushed commits
+git config --global alias.ahead "log --stat origin/master..HEAD --oneline"
