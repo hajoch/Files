@@ -44,7 +44,7 @@ REM 	calls bclean and changes to master/(argument) branch
 git config --global alias.bdone "!f() { git checkout ${1-master} && git bclean ${1-master}; }; f"
 
 REM 	List repo contributors
-git config --global alias.contributors "!git shortlog -n -s --no-merges $@ | cat - && echo && echo total $(git rev-list --count HEAD)"
+git config --global alias.people "!git shortlog -n -s --no-merges $@ | cat - && echo && echo total $(git rev-list --count HEAD)"
 
 REM 	Show all branches not merged into current branch (HEAD)
 git config --global alias.unmerged "!git fetch --all && git branch --all --no-merged HEAD"
