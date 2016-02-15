@@ -51,4 +51,4 @@ git config --global alias.unmerged "!git fetch --all && git branch --all --no-me
 git config --global alias.merged "!git fetch --all && git branch --all --merged HEAD"
 
 REM 	Show unpushed commits
-git config --global alias.ahead "log --stat origin/master..HEAD --oneline"
+git config --global alias.ahead "!f() { git log --stat origin/${1-master}..HEAD --oneline; }; f"
